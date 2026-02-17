@@ -1,0 +1,188 @@
+/* ============================================
+   GLOBALS — Reset, Typography, CSS Custom Properties
+   ============================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+/* --- CSS Reset --- */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    Oxygen, Ubuntu, Cantarell, sans-serif;
+  line-height: 1.5;
+  color: var(--text-primary);
+  background-color: var(--bg-primary);
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+img,
+video {
+  max-width: 100%;
+  display: block;
+}
+
+button {
+  font: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+  color: inherit;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+input,
+textarea {
+  font: inherit;
+}
+
+/* --- Light Theme (default) --- */
+:root {
+  --bg-primary: #f7f6f3;
+  --bg-card: #ffffff;
+  --bg-sidebar: #f7f6f3;
+  --bg-sidebar-active: #ffffff;
+  --bg-header: #ffffff;
+  --bg-hover: rgba(0, 0, 0, 0.04);
+  --bg-input: #f2f1ec;
+  --bg-confetti: linear-gradient(
+    180deg,
+    rgba(76, 175, 80, 0.07) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+
+  --text-primary: #1a1a1a;
+  --text-secondary: #666666;
+  --text-tertiary: #999999;
+
+  --accent-green: #4caf50;
+  --accent-green-light: rgba(76, 175, 80, 0.1);
+  --accent-green-text: #2e7d32;
+
+  --border-color: #eae8e4;
+  --border-light: #f0eeea;
+  --border-card: rgba(0, 0, 0, 0.06);
+
+  --shadow-card: 0 1px 3px rgba(0, 0, 0, 0.05), 0 0 0 1px var(--border-card);
+  --shadow-sidebar-active: 0 1px 6px rgba(0, 0, 0, 0.06), 0 0 0 1px rgba(0, 0, 0, 0.04);
+  --shadow-header: 0 1px 0 rgba(0, 0, 0, 0.06);
+
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.25rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+
+  --font-xs: 0.75rem;
+  --font-sm: 0.8125rem;
+  --font-base: 0.875rem;
+  --font-md: 1rem;
+  --font-lg: 1.125rem;
+  --font-xl: 1.25rem;
+
+  --weight-normal: 400;
+  --weight-medium: 500;
+  --weight-semibold: 600;
+  --weight-bold: 700;
+
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-full: 9999px;
+
+  --header-height: 60px;
+  --subheader-height: 50px;
+  --sidebar-width: 260px;
+  --main-max-width: 700px;
+
+  --transition-fast: 0.15s ease;
+  --transition-base: 0.2s ease;
+
+  --z-sidebar: 10;
+  --z-header: 20;
+}
+
+/* --- Dark Theme --- */
+[data-theme='dark'] {
+  --bg-primary: #121212;
+  --bg-card: #1e1e1e;
+  --bg-sidebar: #161616;
+  --bg-sidebar-active: #252525;
+  --bg-header: #1a1a1a;
+  --bg-hover: rgba(255, 255, 255, 0.06);
+  --bg-input: #2a2a2a;
+  --bg-confetti: linear-gradient(
+    180deg,
+    rgba(76, 175, 80, 0.1) 0%,
+    rgba(30, 30, 30, 0) 100%
+  );
+
+  --text-primary: #e8e8e8;
+  --text-secondary: #a0a0a0;
+  --text-tertiary: #666666;
+
+  --accent-green: #66bb6a;
+  --accent-green-light: rgba(102, 187, 106, 0.15);
+  --accent-green-text: #81c784;
+
+  --border-color: #2e2e2e;
+  --border-light: #252525;
+  --border-card: rgba(255, 255, 255, 0.06);
+
+  --shadow-card: 0 1px 3px rgba(0, 0, 0, 0.4), 0 0 0 1px var(--border-card);
+  --shadow-sidebar-active: 0 2px 8px rgba(0, 0, 0, 0.4);
+  --shadow-header: 0 1px 0 rgba(255, 255, 255, 0.06);
+}
+
+/* --- Scrollbar --- */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--text-tertiary);
+  border-radius: var(--radius-full);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--text-secondary);
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent-green);
+  outline-offset: 2px;
+}
+
+::selection {
+  background-color: var(--accent-green-light);
+  color: var(--text-primary);
+}

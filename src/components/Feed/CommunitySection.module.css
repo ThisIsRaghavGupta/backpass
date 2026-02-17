@@ -1,0 +1,69 @@
+.section {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-card);
+  background-color: var(--bg-card);
+}
+
+.sectionHeader {
+  text-align: center;
+  padding: var(--space-6) var(--space-5) var(--space-5);
+  border-bottom: 1px solid var(--border-light);
+}
+
+.title {
+  font-size: var(--font-xl);
+  font-weight: var(--weight-bold);
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+  line-height: 1.4;
+}
+
+.avatarStack {
+  display: inline-flex;
+  align-items: center;
+  margin: 0 2px;
+}
+
+.stackAvatar {
+  width: 30px;
+  height: 30px;
+  border-radius: var(--radius-full);
+  object-fit: cover;
+  border: 2px solid var(--bg-card);
+  margin-left: -8px;
+  position: relative;
+}
+
+.stackAvatar:first-child {
+  margin-left: 0;
+}
+
+.subtitle {
+  font-size: var(--font-base);
+  color: var(--text-secondary);
+  margin-top: var(--space-1);
+}
+
+.subtitle strong {
+  font-weight: var(--weight-bold);
+  color: var(--text-primary);
+}
+
+.postContainer {
+  /* PinnedPost renders here */
+}
+
+@media (max-width: 767px) {
+  .title {
+    font-size: var(--font-lg);
+  }
+
+  .sectionHeader {
+    padding: var(--space-4);
+  }
+}

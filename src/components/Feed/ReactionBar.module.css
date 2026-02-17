@@ -1,0 +1,73 @@
+.bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: var(--space-2);
+}
+
+.left {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.reactionGroup {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  background-color: var(--bg-input);
+  border-radius: var(--radius-full);
+  padding: 6px 12px;
+  transition: background-color var(--transition-fast);
+}
+
+.reactionGroup:hover {
+  background-color: var(--bg-hover);
+}
+
+.emojis {
+  display: flex;
+  align-items: center;
+  gap: 1px;
+}
+
+.emoji {
+  font-size: 15px;
+  line-height: 1;
+}
+
+.count {
+  font-size: var(--font-base);
+  font-weight: var(--weight-semibold);
+  color: var(--text-secondary);
+  margin-left: 2px;
+}
+
+.actionBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-full);
+  color: var(--text-tertiary);
+  transition: all var(--transition-fast);
+}
+
+.actionBtn:hover {
+  background-color: var(--bg-hover);
+  color: var(--text-primary);
+}
+
+.commentCount {
+  font-size: var(--font-base);
+  color: var(--text-secondary);
+  padding: var(--space-1) var(--space-2);
+  border-radius: var(--radius-md);
+  transition: all var(--transition-fast);
+}
+
+.commentCount:hover {
+  background-color: var(--bg-hover);
+  color: var(--text-primary);
+}
